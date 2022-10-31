@@ -1,0 +1,227 @@
+
+body {
+  font-family: Montserrat, serif;
+}
+
+#checkout {
+  display: flex;
+  flex-direction: column;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#products {
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f2f2;
+  width: 100%;
+  max-width: 385px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2em;
+}
+
+.product {
+  display: flex;
+  flex-direction: row;
+  column-gap: 1em;
+  margin-bottom: 2em;
+}
+
+.product img {
+  width: 135px;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.product > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.product h6 {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-block: 0.5em;
+}
+
+.product .pricing {
+  margin-block: 0.5em;
+}
+
+.price-discounted {
+  color: #f2994a;
+}
+
+.price-original {
+  font-size: 0.75rem;
+  text-decoration: line-through;
+}
+
+.quantity-input {
+  display: inline-block;
+  border: 1px solid #828282;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0.8em;
+  border-radius: 12px;
+  max-width: 135px;
+  margin-top: auto;
+}
+
+.quantity-input input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+  width: 50%;
+  max-width: 50px;
+  margin: 0;
+  background-color: inherit;
+  text-align: center;
+  border: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.quantity-input input[type=number]::-webkit-inner-spin-button,
+.quantity-input input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+}
+
+.quantity-input button {
+  background-color: #e0e0e0;
+  color: #828282;
+  border: none;
+  aspect-ratio: 1 / 1;
+  width: 20px;
+  border-radius: 4px;
+}
+
+#price-calculations {
+  margin-top: 5em;
+}
+
+#price-calculations > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+label {
+  font-size: 0.75rem;
+}
+
+fieldset {
+  margin-top: 2em;
+  padding-left: 0;
+  padding-right: 0;
+  border: none;
+}
+
+legend {
+  padding-left: 0;
+}
+
+fieldset > div input {
+  width: 100%;
+  border-radius: 12px;
+  padding: 0.75em 0.5em 0.75em 3em;
+  border: 1px solid #828282;
+}
+
+.fieldset-flex {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: 1.2em;
+}
+
+.fieldset-flex > div {
+  flex-basis: 100%;
+}
+
+.fieldset-flex > .flex-half {
+  flex-basis: 45%;
+}
+
+fieldset label:after {
+  content: "\A";
+  white-space: pre;
+}
+
+fieldset input {
+  background-repeat: no-repeat;
+  background-size: 24px 70%;
+  background-position: 10px center;
+}
+
+label + input {
+  margin-top: 0.5em;
+}
+
+#email {
+  background-image: url("./images/mail_FILL1_wght400_GRAD0_opsz48.svg");
+}
+
+#phone {
+  background-image: url("./images/call_FILL1_wght400_GRAD0_opsz48.svg");
+}
+
+#name {
+  background-image: url("./images/account_circle_FILL1_wght400_GRAD0_opsz48.svg");
+}
+
+#address {
+  background-image: url("./images/home_FILL1_wght400_GRAD0_opsz48.svg");
+}
+
+#city {
+  background-image: url("./images/location_city_FILL1_wght400_GRAD0_opsz48.svg");
+}
+
+#country {
+  background-image: url("./images/public_FILL1_wght400_GRAD0_opsz48.svg");
+}
+
+#post-code {
+  background-image: url("./images/markunread_mailbox_FILL1_wght400_GRAD0_opsz48.svg");
+}
+
+button[type=submit] {
+  display: block;
+  background-color: #f2994a;
+  padding: 1em 3em;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  margin-top: 1.5em;
+  margin-left: auto;
+}
+
+@media screen and (min-width: 600px) {
+  main {
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+  }
+
+  #checkout {
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 4em;
+  }
+
+  #customer-info {
+    flex-basis: 50%;
+  }
+
+  #products {
+    align-self: start;
+    order: 2;
+  }
+}

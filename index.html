@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Material+Icons&family=Material+Icons+Outlined&family=Material+Icons+Two+Tone&family=Material+Icons+Round&family=Material+Icons+Sharp" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Checkout</h1>
+      <div id="checkout">
+        <div id="products">
+          <div class="product">
+            <img src="images/photo1.png" alt="Vintage backbag" />
+            <div>
+              <h6>Vintage Backbag</h6>
+              <p class="pricing">
+                <span id="backbag-price" class="price-discounted">$54.99</span> &nbsp;
+                <span class="price-original">$94.99</span>
+              </p>
+              <div class="quantity-input">
+                <button class="btn-op" data-for="backbag-quantity" data-op="minus">-</button>
+                <input id="backbag-quantity" type="number" value="1" min="0" />
+                <button class="btn-op" data-for="backbag-quantity" data-op="plus">+</button>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <img src="images/photo2.png" alt="Levi shoes" />
+            <div>
+              <h6>Vintage Backbag</h6>
+              <p class="pricing">
+                <span id="shoes-price" class="price-discounted">$74.99</span> &nbsp;
+                <span class="price-original">$124.99</span>
+              </p>
+              <div class="quantity-input">
+                <button class="btn-op" data-for="shoes-quantity" data-op="minus">-</button>
+                <input id="shoes-quantity" type="number" value="1" min="0" />
+                <button class="btn-op" data-for="shoes-quantity" data-op="plus">+</button>
+              </div>
+            </div>
+          </div>
+          <div id="price-calculations">
+            <hr>
+            <div>
+              <span class="field-name">Shipping</span>
+              <span class="field-amount">$19</span>
+            </div>
+            <hr>
+            <div>
+              <span class="field-name">Total</span>
+              <span id="total" class="field-amount">$148.98</span>
+            </div>
+          </div>
+        </div>
+        <div id="customer-info">
+          <fieldset>
+            <legend>Contact Information</legend>
+            <div class="fieldset-flex">
+              <div>
+                <label for="email">E-mail</label>
+                <input id="email" type="email" placeholder="Enter your email..." />
+              </div>
+              <div>
+                <label for="phone">Phone</label>
+                <input id="phone" type="tel" placeholder="Enter your phone..." />
+              </div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Shipping Address</legend>
+            <div class="fieldset-flex">
+              <div>
+                <label for="name">Full name</label>
+                <input id="name" name="name" type="text" value="Rodney Cotton" />
+              </div>
+              <div>
+                <label for="address">Address</label>
+                <input id="address" name="address" type="text" placeholder="Your address..." />
+              </div>
+              <div>
+                <label for="city">City</label>
+                <input id="city" name="city" type="text" placeholder="Your city..." />
+              </div>
+              <div class="flex-half">
+                <label for="country">Country</label>
+                <input id="country" name="country" type="text" placeholder="Your country..." />
+              </div>
+              <div class="flex-half">
+                <label for="post-code">Post code</label>
+                <input id="post-code" name="postCode" type="text" placeholder="Your post code..." />
+              </div>
+            </div>
+          </fieldset>
+          <input id="save" type="checkbox" />
+          <label for="save">Save this information for next time</label>
+          <button type="submit">Continue</button>
+        </div>
+      </div>
+    </main>
+    <script src="index.js" defer></script>
+  </body>
+</html>
