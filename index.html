@@ -12,7 +12,7 @@
   <body>
     <main>
       <h1>Checkout</h1>
-      <div id="checkout">
+      <form id="checkout">
         <div id="products">
           <div class="product">
             <img src="images/photo1.png" alt="Vintage backbag" />
@@ -88,7 +88,13 @@
               </div>
               <div class="flex-half">
                 <label for="country">Country</label>
-                <input id="country" name="country" type="text" placeholder="Your country..." />
+                <select id="country" name="country" type="text" placeholder="Your country...">
+                  <option value="none" selected disabled hidden>Select your country</option>
+                  <option value="af">🇦🇫 Afghanistan</option>
+                  <option value="al">🇦🇱 Albania</option>
+                  <option value="al">🇩🇿 Algeria</option>
+                  <option value="us">🇺🇸 United States</option>
+                </select>
               </div>
               <div class="flex-half">
                 <label for="post-code">Post code</label>
@@ -100,7 +106,7 @@
           <label for="save">Save this information for next time</label>
           <button type="submit">Continue</button>
         </div>
-      </div>
+      </form>
     </main>
     <script src="index.js" defer></script>
   </body>

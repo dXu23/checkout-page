@@ -17,6 +17,7 @@ body {
   flex-direction: column;
   background-color: #f2f2f2;
   width: 100%;
+  border-radius: 12px;
   max-width: 385px;
   margin-left: auto;
   margin-right: auto;
@@ -127,7 +128,11 @@ legend {
   padding-left: 0;
 }
 
-fieldset > div input {
+select {
+  background-color: #fff;
+}
+
+fieldset > div input, fieldset > div select {
   width: 100%;
   border-radius: 12px;
   padding: 0.75em 0.5em 0.75em 3em;
@@ -154,13 +159,13 @@ fieldset label:after {
   white-space: pre;
 }
 
-fieldset input {
+fieldset input, fieldset select {
   background-repeat: no-repeat;
   background-size: 24px 70%;
   background-position: 10px center;
 }
 
-label + input {
+label + input, label + select {
   margin-top: 0.5em;
 }
 
