@@ -3,6 +3,10 @@ body {
   font-family: Montserrat, serif;
 }
 
+main {
+  margin-top: 5em;
+}
+
 #checkout {
   display: flex;
   flex-direction: column;
@@ -222,11 +226,12 @@ button[type=submit] {
   }
 
   #customer-info {
-    flex-basis: 50%;
+    flex-basis: 45%;
   }
 
   #products {
     align-self: start;
+    margin: 0;
     order: 2;
   }
 }
